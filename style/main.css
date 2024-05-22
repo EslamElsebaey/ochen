@@ -1746,4 +1746,28 @@ html[dir=ltr] .menu-item-has-children .sub-menu a {
   .fixed-header {
     padding: 10px 20px;
   }
+}
+.inner-page header {
+  background-color: #fff;
+}
+.inner-page .big-menu a:not(.sub-menu a),
+.inner-page .lang-type,
+.inner-page .lang-type::after {
+  color: #221355;
+}
+.inner-page .logo-dark {
+  opacity: 0;
+  visibility: hidden;
+}
+.inner-page .logo-light {
+  opacity: 1;
+  visibility: visible;
+}
+.inner-page .menu-item-has-children .item-anchor::after {
+  color: #221355;
+}
+@media only screen and (max-width: 991px) {
+  .inner-page .open-nav-btn .bars-icon {
+    color: #221355;
+  }
 }/*# sourceMappingURL=main.css.map */
