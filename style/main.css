@@ -378,10 +378,15 @@ header:hover + .mainBanner .mainbanner-img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 1400px;
+  width: 1600px;
   max-width: 100%;
 }
 
+@media screen and (max-width: 1400px) {
+  .header-content {
+    width: 1400px;
+  }
+}
 .logo {
   display: flex;
   justify-content: flex-start;
