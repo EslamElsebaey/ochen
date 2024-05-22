@@ -1,0 +1,167 @@
+.about {
+  padding-top: 60px;
+  padding-bottom: 140px;
+}
+.about-title {
+  font-size: 30px;
+  color: #221355;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.about-parent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-desc {
+  width: 554px;
+  font-size: 18px;
+  line-height: 34px;
+  color: #221355;
+  margin-bottom: 35px;
+  text-align: justify;
+}
+
+.btns-holder {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.download-btn {
+  min-width: 183px;
+  &:hover {
+    color: $yellow-color;
+  }
+}
+.request-btn {
+  min-width: 173px;
+  background-color: $blue-color;
+  color: $yellow-color;
+  &::after{
+    background-color: $yellow-color;
+  }
+  &:hover {
+    color: $blue-color;
+  }
+}
+.about{
+  .img-holder {
+  position: relative;
+  &::after {
+    content: "";
+    width: 78.7%;
+    height: 100%;
+    background-color: #f6c401;
+    top: 50px;
+      inset-inline-start: 121px;
+    position: absolute;
+    z-index: -1;
+    transform: skewX(-13deg);
+  }
+  img {
+    width: 451px;
+    object-fit: cover;
+    aspect-ratio: 451 / 505;
+  }
+}
+}
+
+
+
+
+
+@include max-1300 {
+  .about .img-holder img{
+    width: 380px;
+  }
+  .about-parent{
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+
+@include max-1200 {
+  .about-desc{
+    width: 400px;
+  }
+  .about .img-holder img{
+    width: 300px;
+  }
+  .about .img-holder::after{
+    inset-inline-start: 95px;
+  }
+  .about-parent{
+    gap: 98px;
+  }
+}
+
+@include max-992 {
+ .about-parent{
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-desc{
+    width: 100%;
+    text-align: center;
+  }
+  .about-title{
+    text-align: center;
+  }
+  .btns-holder{
+    justify-content: center;
+  }
+  .about .img-holder img{
+    width: 400px;
+  }
+  .about .img-holder::after{
+    inset-inline-start: 120px ;
+  }
+ 
+}
+
+@include max-768 {
+   .about-parent{
+    gap: 40px;
+  }
+  .about-title{
+    font-size: 20px;
+  }
+  .about-desc{
+    margin-bottom: 30px;
+  }
+  .about-desc{
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .about .img-holder img{
+    width: 265px;
+  }
+  .about .img-holder::after{
+    inset-inline-start: 80px;
+    top: 36px;
+  }
+  .img-parent{
+        display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+ .about .img-holder{
+  margin-inline-start: -60px;
+ }
+ .about{
+  padding-top: 50px;
+  padding-bottom: 100px;
+ }
+ 
+}
+
+@media screen and (max-width : 400px) {
+   .about-item .mybtn{
+    width: 100%;
+    padding: 0 20px;
+    min-width: unset;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,42 @@
+.clients {
+  position: relative;
+  padding: 115px 0 150px 0;
+  .mySwiper-parent {
+    position: relative;
+    margin-top: 55px;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+   bottom: -60px;
+  }
+  .main-title{
+   color: $blue-color;
+  }
+  .swiper-wrapper {
+    align-items: center;
+  }
+}
+.client-item {
+   display: flex;
+   justify-content: center;
+    img {
+    width: auto;
+    max-width: 100%;
+  }
+} 
+
+
+
+@include max-768 {
+  .clients {
+    padding: 50px 0 70px 0;
+  }
+  .clients .mySwiper-parent {
+    margin: 25px 0;
+  }
+  .clients .main-title{
+    margin-bottom: 40px;
+  }
+  .clients .swiper-horizontal > .swiper-pagination-bullets, .clients .swiper-pagination-bullets.swiper-pagination-horizontal, .clients .swiper-pagination-custom, .clients .swiper-pagination-fraction{
+    bottom: -40px;
+  }
+}

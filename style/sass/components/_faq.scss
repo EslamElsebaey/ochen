@@ -1,0 +1,146 @@
+.faq {
+  padding: 105px 0;
+  background-color: #f7f7f7;
+  .main-title {
+    text-align: start;
+    color: #221355;
+    width: auto;
+    margin-inline: unset;
+  }
+}
+
+.faq-parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.ques-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-question {
+  position: relative;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 27px 0;
+  cursor: pointer;
+}
+
+.main-question.active {
+  .ques-details .icon {
+    transform: rotate(180deg);
+  }
+  .fa-plus:before {
+    content: "\f068";
+  }
+}
+
+.ques-text {
+  font-size: 18px;
+  color: #221355;
+  font-weight: 700;
+  text-align: start;
+  transition: all ease-in-out 0.1s;
+  margin: 0;
+  cursor: pointer;
+}
+
+.ques-details {
+  .icon {
+    font-size: 24px;
+    display: flex;
+    margin-inline-start: auto;
+    align-items: center;
+    justify-content: center;
+    color: #221355;
+    transition: all linear 0.2s;
+  }
+}
+.ques-answer {
+  font-size: 16px;
+  line-height: 28px;
+  color: #636363;
+  text-align: start;
+  padding-inline-end: 60px;
+  margin-top: 10px;
+  display: none;
+  font-weight: 400;
+}
+
+.faq-img-holder{
+    img{
+        width: 511px;
+        aspect-ratio: 511 / 458;
+        object-fit: cover;
+    }
+}
+
+.questions-parent {
+  width: 555px;
+}
+
+@include max-1200 {
+.faq-img-holder img{
+  width: 400px;
+}
+.questions-parent{
+  width: 450px;
+}
+}
+@include max-992 {
+  .ques-text {
+    font-size: 16px;
+  }
+  .faq-questions-cont{
+    width: 100%;
+  }
+  .faq-parent{
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+  }
+  .faq .main-title{
+    text-align: center;
+  }
+  .questions-parent{
+    width: 100%;
+  }
+}
+
+@include max-768 {
+  .main-question {
+    padding: 20px 0;
+  }
+  .ques-text {
+    line-height: 1.8;
+  }
+  .faq .sub-title {
+    margin-bottom: 20px;
+  }
+  .faq .titles-parent {
+    margin-bottom: 30px;
+  }
+  .faq-parent{
+    row-gap: 40px;
+  }
+  .ques-text {
+    padding-inline-end: 15px;
+  }
+  .faq .main-title{
+    margin-bottom: 20px;
+  }
+  .faq {
+    padding: 50px 0;
+  }
+  .ques-answer {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .ques-answer {
+    padding-inline-end: 40px;
+  }
+  .faq-img-holder img{
+    width: 100%;
+  }
+}

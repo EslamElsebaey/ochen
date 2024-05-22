@@ -1,0 +1,85 @@
+.fixed-header{
+  z-index: 100;
+  border-bottom: 1px solid #e6e6e6;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter : saturate(180%) blur(7px) ;
+  padding: 10px 30px;
+  .menu-item-has-children .item-anchor::after{
+    color: #221355;
+  }
+  .logo-light{
+    opacity: 1;
+    visibility: visible;
+  }
+  .logo-dark{
+    opacity: 0;
+    visibility: hidden;
+  }
+  .big-menu a:not(.sub-menu a){
+    color: #221355;
+    &:hover{
+      color: $yellow-color;
+    }
+  }
+   .lang-type{
+    color: #221355;
+    &::after{
+      color: #221355;
+    }
+  }
+  .lang:hover .lang-type{
+    color: $yellow-color;
+  }
+  .menu-item-has-children:hover .item-anchor::after{
+    color: $yellow-color;
+  }
+}
+
+
+html[dir="ltr"]{
+  .overlay-solid{
+    clip-path: polygon(0% 0, 78% 0, 100% 100%, 0 100%);
+    // clip-path: polygon(0 0, 33% 0, 100% 100%, 0 100%);
+  }
+  .main-title{
+    line-height: 1.35;
+  }
+  .overlay-gradient{
+     clip-path: polygon(0% 0, 78% 0, 100% 100%, 0 100%);
+     z-index: 2;
+  }
+  .banner-desc .main-title{
+    line-height: 1.25;
+  }
+  .ques-answer{
+    line-height: 1.6;
+  }
+  .menu-item-has-children .sub-menu a{
+    line-height: 1.4;
+  }
+  @include max-768{
+    .banner-desc .desc-title{
+      line-height: 1.45;
+    }
+    .about .img-holder::after{
+      inset-inline-start: 70px;
+    }
+  }
+}
+
+@include max-992 {
+  .fixed-header{
+      .open-nav-btn .bars-icon{
+    color: #221355;
+  }
+  }
+
+}
+
+
+@include max-768 {
+  .fixed-header{
+    padding: 10px 20px;
+  }
+
+}
