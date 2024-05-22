@@ -129,6 +129,9 @@ $(document).ready(function () {
   });
 
   /************************************************************************************************** */
+
+  // Overlay on products & servicea items
+
   $(window).scroll(function () {
     var windowScrollTop = $(window).scrollTop();
     var myproducts = $("#myproducts").length && $("#myproducts").offset().top;
