@@ -1702,6 +1702,9 @@ html[dir=ltr] .overlay-solid {
   -webkit-clip-path: polygon(0% 0, 78% 0, 100% 100%, 0 100%);
           clip-path: polygon(0% 0, 78% 0, 100% 100%, 0 100%);
 }
+html[dir=ltr] .banner-desc .desc-title {
+  font-size: 36px;
+}
 html[dir=ltr] .message input {
   padding-inline-end: 115px;
 }
@@ -1728,6 +1731,9 @@ html[dir=ltr] .menu-item-has-children .sub-menu a {
   }
   html[dir=ltr] .about .img-holder::after {
     inset-inline-start: 70px;
+  }
+  html[dir=ltr] .banner-desc .desc-title {
+    font-size: 25px;
   }
 }
 
