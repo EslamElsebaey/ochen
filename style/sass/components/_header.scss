@@ -53,7 +53,7 @@ header:hover + .mainBanner .mainbanner-img {
   display: flex;
   justify-content: center;
   align-items: center;
-  a:not(.sub-menu a) {
+   > li > a {
     font-size: 14px;
     color: #fff;
     text-align: center;
@@ -171,7 +171,7 @@ header:hover + .mainBanner .mainbanner-img {
 .menu-item-has-children {
   position: relative;
   padding: 10px 0;
-  .item-anchor {
+  > a {
     column-gap: 3px;
     &::after {
       content: "\f078";
@@ -186,7 +186,7 @@ header:hover + .mainBanner .mainbanner-img {
     align-items: baseline;
   }
   &:hover {
-    .item-anchor {
+    > a  {
       color: $yellow-color;
       &::after {
         color: $yellow-color;
@@ -233,6 +233,7 @@ header:hover + .mainBanner .mainbanner-img {
     }
   }
 }
+
 
 .open-nav {
   inset-inline-start: -100%;
@@ -289,12 +290,12 @@ header:hover + .mainBanner .mainbanner-img {
   .lang-type::after {
     color: $blue-color;
   }
-  .menu-item-has-children .item-anchor::after {
+  .menu-item-has-children > a::after {
     font-size: 14px;
     transition: linear all 0.2s;
     color: $blue-color;
   }
-  .menu-item-has-children .item-anchor.icon-rotate::after {
+  .menu-item-has-children > a.icon-rotate::after {
     transform: rotate(180deg);
   }
   .menu-item-has-children .sub-menu {
@@ -373,7 +374,7 @@ header:hover + .mainBanner .mainbanner-img {
     width: 100%;
     padding: 0;
   }
-  .big-menu a:not(.sub-menu a) {
+  .big-menu > li >  a {
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -4,8 +4,11 @@
   background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: saturate(180%) blur(7px);
   padding: 10px 30px;
-  .menu-item-has-children .item-anchor::after {
+  .menu-item-has-children > a::after {
     color: #221355;
+  }
+  .menu-item-has-children:hover > a {
+    color: $yellow-color;
   }
   .logo-light {
     opacity: 1;
@@ -15,7 +18,7 @@
     opacity: 0;
     visibility: hidden;
   }
-  .big-menu a:not(.sub-menu a) {
+  .big-menu > li >  a {
     color: #221355;
     &:hover {
       color: $yellow-color;
@@ -30,7 +33,7 @@
   .lang:hover .lang-type {
     color: $yellow-color;
   }
-  .menu-item-has-children:hover .item-anchor::after {
+  .menu-item-has-children:hover > a::after {
     color: $yellow-color;
   }
 }
@@ -93,7 +96,7 @@ html[dir="ltr"] {
   header {
     background-color: #fff;
   }
-  .big-menu a:not(.sub-menu a),
+  .big-menu > li > a,
   .lang-type,
   .lang-type::after {
     color: #221355;
@@ -106,7 +109,7 @@ html[dir="ltr"] {
     opacity: 1;
     visibility: visible;
   }
-  .menu-item-has-children .item-anchor::after {
+  .menu-item-has-children > a::after {
     color: #221355;
   }
   @include max-992 {

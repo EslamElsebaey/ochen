@@ -405,7 +405,7 @@ header:hover + .mainBanner .mainbanner-img {
   justify-content: center;
   align-items: center;
 }
-.big-menu a:not(.sub-menu a) {
+.big-menu > li > a {
   font-size: 14px;
   color: #fff;
   text-align: center;
@@ -413,7 +413,7 @@ header:hover + .mainBanner .mainbanner-img {
   transition: all linear 0.2s;
   position: relative;
 }
-.big-menu a:not(.sub-menu a):hover {
+.big-menu > li > a:hover {
   text-decoration: none;
   color: #f6c401;
 }
@@ -522,7 +522,7 @@ header:hover + .mainBanner .mainbanner-img {
   position: relative;
   padding: 10px 0;
 }
-.menu-item-has-children .item-anchor {
+.menu-item-has-children > a {
   -moz-column-gap: 3px;
        column-gap: 3px;
   position: relative;
@@ -530,17 +530,17 @@ header:hover + .mainBanner .mainbanner-img {
   justify-content: center;
   align-items: baseline;
 }
-.menu-item-has-children .item-anchor::after {
+.menu-item-has-children > a::after {
   content: "\f078";
   font-family: "Font Awesome 6 Pro";
   font-size: 10px;
   color: #fff;
   transition: color 0.2s linear;
 }
-.menu-item-has-children:hover .item-anchor {
+.menu-item-has-children:hover > a {
   color: #f6c401;
 }
-.menu-item-has-children:hover .item-anchor::after {
+.menu-item-has-children:hover > a::after {
   color: #f6c401;
 }
 .menu-item-has-children:hover .sub-menu {
@@ -617,12 +617,12 @@ header:hover + .mainBanner .mainbanner-img {
   .lang-type::after {
     color: #221355;
   }
-  .menu-item-has-children .item-anchor::after {
+  .menu-item-has-children > a::after {
     font-size: 14px;
     transition: linear all 0.2s;
     color: #221355;
   }
-  .menu-item-has-children .item-anchor.icon-rotate::after {
+  .menu-item-has-children > a.icon-rotate::after {
     transform: rotate(180deg);
   }
   .menu-item-has-children .sub-menu {
@@ -699,7 +699,7 @@ header:hover + .mainBanner .mainbanner-img {
     width: 100%;
     padding: 0;
   }
-  .big-menu a:not(.sub-menu a) {
+  .big-menu > li > a {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1668,8 +1668,11 @@ header:hover + .mainBanner .mainbanner-img {
           backdrop-filter: saturate(180%) blur(7px);
   padding: 10px 30px;
 }
-.fixed-header .menu-item-has-children .item-anchor::after {
+.fixed-header .menu-item-has-children > a::after {
   color: #221355;
+}
+.fixed-header .menu-item-has-children:hover > a {
+  color: #f6c401;
 }
 .fixed-header .logo-light {
   opacity: 1;
@@ -1679,10 +1682,10 @@ header:hover + .mainBanner .mainbanner-img {
   opacity: 0;
   visibility: hidden;
 }
-.fixed-header .big-menu a:not(.sub-menu a) {
+.fixed-header .big-menu > li > a {
   color: #221355;
 }
-.fixed-header .big-menu a:not(.sub-menu a):hover {
+.fixed-header .big-menu > li > a:hover {
   color: #f6c401;
 }
 .fixed-header .lang-type {
@@ -1694,7 +1697,7 @@ header:hover + .mainBanner .mainbanner-img {
 .fixed-header .lang:hover .lang-type {
   color: #f6c401;
 }
-.fixed-header .menu-item-has-children:hover .item-anchor::after {
+.fixed-header .menu-item-has-children:hover > a::after {
   color: #f6c401;
 }
 
@@ -1750,7 +1753,7 @@ html[dir=ltr] .menu-item-has-children .sub-menu a {
 .inner-page header {
   background-color: #fff;
 }
-.inner-page .big-menu a:not(.sub-menu a),
+.inner-page .big-menu > li > a,
 .inner-page .lang-type,
 .inner-page .lang-type::after {
   color: #221355;
@@ -1763,7 +1766,7 @@ html[dir=ltr] .menu-item-has-children .sub-menu a {
   opacity: 1;
   visibility: visible;
 }
-.inner-page .menu-item-has-children .item-anchor::after {
+.inner-page .menu-item-has-children > a::after {
   color: #221355;
 }
 @media only screen and (max-width: 991px) {
