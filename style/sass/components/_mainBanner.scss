@@ -153,9 +153,6 @@
 }
 
 @include max-768{
-  .mainBanner{
-    height: 100dvh;
-  }
   .banner-desc .main-title, .banner-desc .desc-title{
     font-size: 30px;
     text-align: center;
