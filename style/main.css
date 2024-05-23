@@ -901,6 +901,9 @@ header:hover + .mainBanner .mainbanner-img {
   }
 }
 @media only screen and (max-width: 767px) {
+  .mainBanner {
+    height: 100dvh;
+  }
   .banner-desc .main-title, .banner-desc .desc-title {
     font-size: 30px;
     text-align: center;
